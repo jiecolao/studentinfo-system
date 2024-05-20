@@ -39,13 +39,19 @@ SIS/
 ## 🔷 SETTING UP THE PROJECT SA NETBEANS NYO
 
 > [!NOTE]
-> Hindi mo idodownload to ha, iclone mo para makapush and pull ka.
+> Hindi mo idodownload to ha, iremote and iclone mo para makapush and pull ka.
 
-Clone[^1] this project via git using the github link of this project
-### 🔗 https://github.com/jiecolao/studentinfo-system.git
+Rmote[^1][^2] this project via Git using the Github link of this project
+### 🔗 https://github.com/jiecolao/studentinfo-system.git 
 <br> 
-After niyo malink,
 
+After niyo ma-add as *remote*, run the necessary git commands such as `fetch`, `clone`, etc... assuming na alam niyo na mag git.
+
+The project should load like kung pano nakalayout dun sa picture sa taas.
+Perform `Clean and Build` by right-clicking yung project folder para maverify yung project.
+
+> [!NOTE]
+> POWERSHELL ginagamit ko sa pagrun ng git ko, up to you naman kung manually mo gagawin or if plan mo gawin via netbeans.  
 <br> <br>
 
 ## 🔷 AS FOR THE DATABASE TABLE LAYOUT
@@ -89,9 +95,8 @@ Itake note niyo lang yung names ng **TABLE** and **COLUMN** pati yung correspond
 > [!IMPORTANT]
 > NAKA FOREIGN-KEY DAPAT SA `users` TABLE YUNG IBANG TABLES.
 
-<br> <br>
+<br>
 
-## VVV YT TUTORIALS ARE LINKED AT THE FOOTER VVV
 [^1]: How to link github to Netbeans projects 🔗 https://youtu.be/UOIPS-ewFHg?si=D6DL5SrgkqCaMw_O
-[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
-  This is a second line.
+[^2]: Github tutorial via powershell 🔗 https://youtu.be/hrTQipWp6co?si=eql_MuhQurMwOfaV
+
