@@ -1,5 +1,8 @@
 # 📌 STRICTLY READ BEFORE PROCEEDING
 
+> [!CAUTION]
+> Make sure na may copy rin kayo locally just in case na magkaproblema yung repo natin. Hopefully walang mangyari.
+
 Bali ganyan ang magiging formatting ng project natin. I'm going to expect na kayo narin gagawa ng database nyo so **READ** this carefully and let this serve you as your **GUIDELINE**  
 
 ```
