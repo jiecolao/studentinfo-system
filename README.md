@@ -52,12 +52,12 @@ Perform `Clean and Build` by right-clicking yung project folder para maverify yu
 
 > [!NOTE]
 > POWERSHELL ginagamit ko sa pagrun ng git ko, up to you naman kung manually mo gagawin or if plan mo gawin via netbeans.  
-<br> <br>
+
+<br>
 
 ## 🔷 AS FOR THE DATABASE TABLE LAYOUT
 
-> [!NOTE]
-> May susundan tayong basis for naming columns.
+May susundan tayong basis for naming columns.
 
 > Student ID = `stud_id` <br>
 password = `stud_pass` <br>
