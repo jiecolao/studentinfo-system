@@ -18,7 +18,7 @@ SIS/
 └── pom.xml
 ```
 
-![image](https://github.com/jiecolao/student-information-system/assets/137901217/3c937ae8-88c6-4ad3-8572-30aee13be59e)
+![image](https://github.com/jiecolao/studentinfo-system/assets/137901217/29d0c546-b2cd-422b-a5f4-eef3e9932c70)
 
 `com.plm.sis.database` - dito mo mahahanap yung class file for interaction between our *source code* and the *database*. <br>
 `com.plm.sis.frames` - dito niyo lagay frames niyo (*naturuan ko naman kayo pano gumawa frames sa netbeans*). <br>
