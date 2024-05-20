@@ -42,7 +42,7 @@ SIS/
 > Hindi mo idodownload to ha, iclone mo para makapush and pull ka.
 
 Clone[^1] this project via git using the github link of this project
-### 🔗 https://github.com/jiecolao/student-information-system.git
+### 🔗 https://github.com/jiecolao/studentinfo-system.git
 <br> 
 After niyo malink,
 
