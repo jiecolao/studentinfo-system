@@ -41,7 +41,7 @@ SIS/
 > [!NOTE]
 > Hindi mo idodownload to ha, iremote and iclone mo para makapush and pull ka.
 
-Rmote[^1][^2] this project via Git using the Github link of this project
+Remote[^1][^2] this project via Git using the Github link of this project
 ### 🔗 https://github.com/jiecolao/studentinfo-system.git 
 <br> 
 
@@ -93,7 +93,7 @@ Itake note niyo lang yung names ng **TABLE** and **COLUMN** pati yung correspond
 | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* |
 
 > [!IMPORTANT]
-> NAKA FOREIGN-KEY DAPAT SA `users` TABLE YUNG IBANG TABLES.
+> NAKA FOREIGN-KEY DAPAT YUNG `stud_id` SA `stud_id` NG `users` TABLE YUNG IBANG TABLES.
 
 <br>
 
