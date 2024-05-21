@@ -8,7 +8,7 @@ Bali ganyan ang magiging formatting ng project natin. I'm going to expect na kay
 ```
 SIS/
 ├── src/
-│   ├── main/
+│   └── main/
 │       ├── java/
 │       │   └── com/
 │       │       └── plm/
