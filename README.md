@@ -84,7 +84,7 @@ Itake note niyo lang yung names ng **TABLE** and **COLUMN** pati yung correspond
 | 202212345 | Jograt | myemail@gmail.com | 09151234567 | CISTM | CS | regular | 1 |
 | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* |
 
-* *`grades` TABLE* how sa pdf tho
+* *`grades` TABLE* (subject to change)
 
 | **stud_id** | **grd_yr** | **grd_sem** | **grd_subj** | **grades** |
 | --- | --- | --- | --- | --- |
