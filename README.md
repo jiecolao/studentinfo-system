@@ -93,7 +93,7 @@ Itake note niyo lang yung names ng **TABLE** and **COLUMN** pati yung correspond
 | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* |
 
 > [!IMPORTANT]
-> NAKA FOREIGN-KEY DAPAT YUNG `stud_id` SA `stud_id` NG `users` TABLE YUNG IBANG TABLES.
+> Make sure na mainvoke niyo yung createDB sa database method nyo para maverify if may database.
 
 <br>
 
