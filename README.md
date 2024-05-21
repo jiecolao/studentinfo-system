@@ -79,7 +79,7 @@ Itake note niyo lang yung names ng **TABLE** and **COLUMN** pati yung correspond
 
 * *`info` TABLE*
 
-| $${\color{red}stud_id}$$ **stud_id** | **stud_name** | **stud_email** | **stud_contact** | **stud_col** | **stud_crs** | **stud_type** | **stud_yrlvl** |  
+| <span style="color: yellow;">**stud_id**</span> | **stud_name** | **stud_email** | **stud_contact** | **stud_col** | **stud_crs** | **stud_type** | **stud_yrlvl** |  
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 202212345 | Jograt | myemail@gmail.com | 09151234567 | CISTM | CS | regular | 1 |
 | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* |
