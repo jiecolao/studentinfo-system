@@ -1,9 +1,14 @@
 
 package com.plm.sis;
 
+import com.plm.sis.database.*;
+
 public class Main {
 
+    static DBaccess db = new DBaccess();
+    
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        db.createDB();
+        System.out.print("DONE");
     }
 }
