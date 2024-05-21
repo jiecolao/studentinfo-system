@@ -84,13 +84,13 @@ Itake note niyo lang yung names ng **TABLE** and **COLUMN** pati yung correspond
 | 202212345 | Jograt | myemail@gmail.com | 09151234567 | CISTM | CS | regular | 1 |
 | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* |
 
-* *`grades` TABLE* (subject to change)
+* *`grades` TABLE*
 
-| **stud_id** | **grd_yr** | **grd_sem** | **grd_subj** | **grades** |
-| --- | --- | --- | --- | --- |
-| 202212345 | 1 | 1 | CSC | 1.00 |
-| 202212345 | 1 | 2 | DSA | 1.25 |
-| *null* | *null* | *null* | *null* | *null* |
+| **stud_id** | **subj_code** | **subj_sec** | **subj_title** | **subj_units** | **subj_days** | **subj_time** | **subj_room** | **subj_sem1_grade** | **subj_sem2_grade** | **subj_gwa** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 202212345 | ICC 0103 | 2 | Intermediate Programming (Lec) | 2 | *null* | *null* | GL 302 | 92 | 89 | 1.00 |  
+| 202212345 | ICC 0103.01 | 2 | Intermediate Programming (Lab) | 1 | *null* | *null* | GV 302 | 90 | 88 | 1.29 |  
+| *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* |
 
 > [!IMPORTANT]
 > NAKA FOREIGN-KEY DAPAT SA `users` TABLE YUNG IBANG TABLES.
