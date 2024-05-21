@@ -8,7 +8,7 @@ Bali ganyan ang magiging formatting ng project natin. I'm going to expect na kay
 ```
 SIS/
 ├── src/
-│   ├── main/
+│   └── main/
 │       ├── java/
 │       │   └── com/
 │       │       └── plm/
@@ -39,19 +39,25 @@ SIS/
 ## 🔷 SETTING UP THE PROJECT SA NETBEANS NYO
 
 > [!NOTE]
-> Hindi mo idodownload to ha, iclone mo para makapush and pull ka.
+> Hindi mo idodownload to ha, iremote and iclone mo para makapush and pull ka.
 
-Clone[^1] this project via git using the github link of this project
-### 🔗 https://github.com/jiecolao/studentinfo-system.git
+Remote[^1][^2] this project via Git using the Github link of this project
+### 🔗 https://github.com/jiecolao/studentinfo-system.git 
 <br> 
-After niyo malink,
 
-<br> <br>
+After niyo ma-add as *remote*, run the necessary git commands such as `fetch`, `clone`, etc... assuming na alam niyo na mag git.
+
+The project should load like kung pano nakalayout dun sa picture sa taas.
+Perform `Clean and Build` by right-clicking yung project folder para maverify yung project.
+
+> [!NOTE]
+> POWERSHELL ginagamit ko sa pagrun ng git ko, up to you naman kung manually mo gagawin or if plan mo gawin via netbeans.  
+
+<br>
 
 ## 🔷 AS FOR THE DATABASE TABLE LAYOUT
 
-> [!NOTE]
-> May susundan tayong basis for naming columns.
+May susundan tayong basis for naming columns.
 
 > Student ID = `stud_id` <br>
 password = `stud_pass` <br>
@@ -78,20 +84,19 @@ Itake note niyo lang yung names ng **TABLE** and **COLUMN** pati yung correspond
 | 202212345 | Jograt | myemail@gmail.com | 09151234567 | CISTM | CS | regular | 1 |
 | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* |
 
-* *`grades` TABLE* how sa pdf tho
+* *`grades` TABLE*
 
-| **stud_id** | **grd_yr** | **grd_sem** | **grd_subj** | **grades** |
-| --- | --- | --- | --- | --- |
-| 202212345 | 1 | 1 | CSC | 1.00 |
-| 202212345 | 1 | 2 | DSA | 1.25 |
-| *null* | *null* | *null* | *null* | *null* |
+| **stud_id** | **subj_code** | **subj_sec** | **subj_title** | **subj_units** | **subj_days** | **subj_time** | **subj_room** | **subj_sem1_grade** | **subj_sem2_grade** | **subj_gwa** |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 202212345 | ICC 0103 | 2 | Intermediate Programming (Lec) | 2 | *null* | *null* | GL 302 | 92 | 89 | 1.00 |  
+| 202212345 | ICC 0103.01 | 2 | Intermediate Programming (Lab) | 1 | *null* | *null* | GV 302 | 90 | 88 | 1.29 |  
+| *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* | *null* |
 
 > [!IMPORTANT]
-> NAKA FOREIGN-KEY DAPAT SA `users` TABLE YUNG IBANG TABLES.
+> NAKA FOREIGN-KEY DAPAT YUNG `stud_id` SA `stud_id` NG `users` TABLE YUNG IBANG TABLES.
 
-<br> <br>
+<br>
 
-## VVV YT TUTORIALS ARE LINKED AT THE FOOTER VVV
 [^1]: How to link github to Netbeans projects 🔗 https://youtu.be/UOIPS-ewFHg?si=D6DL5SrgkqCaMw_O
-[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
-  This is a second line.
+[^2]: Github tutorial via powershell 🔗 https://youtu.be/hrTQipWp6co?si=eql_MuhQurMwOfaV
+
