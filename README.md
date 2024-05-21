@@ -27,7 +27,7 @@ SIS/
 `com.plm.sis.frames` - dito niyo lagay frames niyo (*naturuan ko naman kayo pano gumawa frames sa netbeans*). <br>
 `com.plm.sis.model` - andito yung class file na paggagamitan niyo as reference sa current user. <br>
 `Test Packages` - if may gusto kayong itrial and error, dito niyo gawin. <br>
-`Other sources > resources` - dito niyo upload yung mga gagamitin na necessary jpegs. **INDICATE NIYO FILEPATH NETO IF EVER MAN NA MAGUUPLOAD KAYO DITO LIKE UNG PROFILE PIC, PDF, ETC.** <br>
+`Other sources > resources` - dito niyo upload yung mga gagamitin na necessary assets like pdf, txt, jpegs, etc. **INDICATE NIYO FILEPATH NETO IF EVER MAN NA MAGUUPLOAD KAYO DITO LIKE UNG PROFILE PIC, PDF, ETC.** <br>
 `pom.xml` - Kapag may bago kayong jars na nilagay, update nyo to.
 <br>
 
