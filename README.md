@@ -3,7 +3,7 @@
 > [!CAUTION]
 > Make sure na may copy rin kayo locally just in case na magkaproblema yung repo natin. Hopefully walang mangyari.
 
-Bali ganyan ang magiging formatting ng project natin. I'm going to expect na kayo narin gagawa ng database nyo so **READ** this carefully and let this serve you as your **GUIDELINE**  
+Bali ganyan ang magiging formatting ng project natin. I'm going to expect na kayo narin gagawa ng code nyo para sa database so **READ** this carefully and let this serve you as your **GUIDELINE**  
 
 ```
 SIS/
@@ -27,7 +27,7 @@ SIS/
 `com.plm.sis.frames` - dito niyo lagay frames niyo (*naturuan ko naman kayo pano gumawa frames sa netbeans*). <br>
 `com.plm.sis.model` - andito yung class file na paggagamitan niyo as reference sa current user. <br>
 `Test Packages` - if may gusto kayong itrial and error, dito niyo gawin. <br>
-`Other sources > resources` - dito niyo upload yung mga gagamitin na necessary jpegs. **INDICATE NIYO FILEPATH NETO IF EVER MAN NA MAGUUPLOAD KAYO DITO LIKE UNG PROFILE PIC, PDF, ETC.** <br>
+`Other sources > resources` - dito niyo upload yung mga gagamitin na necessary assets like pdf, txt, jpegs, etc. **INDICATE NIYO FILEPATH NETO IF EVER MAN NA MAGUUPLOAD KAYO DITO LIKE UNG PROFILE PIC, PDF, ETC.** <br>
 `pom.xml` - Kapag may bago kayong jars na nilagay, update nyo to.
 <br>
 
