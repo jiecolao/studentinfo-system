@@ -78,6 +78,23 @@ public class DBaccess {
                     "FOREIGN KEY(stud_id) REFERENCES users(stud_id));";
             pst = sqlConn.prepareStatement(sqlcmd);
             pst.executeUpdate();
+
+//            // attendance
+//            sqlcmd = "CREATE TABLE IF NOT EXISTS grades (" +
+//                    "stud_id INT, " +
+//                    "stud_attd VARCHAR(10), " +
+//                    "subj_sec INT, " +
+//                    "subj_title VARCHAR(100), " +
+//                    "subj_units INT, " +
+//                    "subj_days INT, " +
+//                    "subj_time INT, " +
+//                    "subj_room VARCHAR(10), " +
+//                    "subj_sem1_grade DECIMAL(5, 2), " +
+//                    "subj_sem2_grade DECIMAL(5, 2), " +
+//                    "subj_gwa DECIMAL(5, 2), " +
+//                    "FOREIGN KEY(stud_id) REFERENCES users(stud_id));";
+//            pst = sqlConn.prepareStatement(sqlcmd);
+//            pst.executeUpdate();
         } catch (SQLException e) {
                 e.printStackTrace();
         } catch (ClassNotFoundException e) { 
