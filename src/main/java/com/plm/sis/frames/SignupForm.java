@@ -1,22 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.plm.sis.frames;
 
-/**
- *
- * @author Victus
- */
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
+import com.plm.sis.frames.*;
+
 public class SignupForm extends javax.swing.JFrame {
 
     /**
-     * Creates new form SignupForm
+     * Creates new form LoginForm
      */
     public SignupForm() {
         initComponents();
+        setResizableImage();
     }
 
+    private void setResizableImage() {
+    // Load the image
+    String filePath = "C:\\Users\\Victus\\Documents\\NetBeansProjects\\SIS\\src\\main\\resources\\pictest.jpg";
+    ImageIcon originalIcon = new ImageIcon(filePath);
+
+    // Get the original image
+    Image originalImage = originalIcon.getImage();
+
+    // Resize the image to fit the JLabel
+    Image resizedImage = originalImage.getScaledInstance(jL_pic.getWidth(), jL_pic.getHeight(), Image.SCALE_SMOOTH);
+
+    // Create a new ImageIcon from the resized image
+    ImageIcon resizedIcon = new ImageIcon(resizedImage);
+
+    // Set the resized image icon to the JLabel
+    jL_pic.setIcon(resizedIcon);
+}
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,21 +42,193 @@ public class SignupForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jL_pic = new javax.swing.JLabel();
+        jL_title = new javax.swing.JLabel();
+        jL_fullN = new javax.swing.JLabel();
+        jTF_fullN = new java.awt.TextField();
+        jL_studID = new javax.swing.JLabel();
+        jTF_studID = new java.awt.TextField();
+        jL_studPass = new javax.swing.JLabel();
+        jTF_studPass = new java.awt.TextField();
+        jL_PLMemail = new javax.swing.JLabel();
+        jTF_PLMemail = new java.awt.TextField();
+        LoginB = new javax.swing.JButton();
+        SignupB = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("PLM Student Information System");
+        setBackground(new java.awt.Color(255, 255, 255));
+        setResizable(false);
+
+        jL_pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictest.jpg"))); // NOI18N
+
+        jL_title.setBackground(new java.awt.Color(0, 0, 0));
+        jL_title.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jL_title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jL_title.setText("Sign up");
+
+        jL_fullN.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jL_fullN.setForeground(java.awt.SystemColor.controlDkShadow);
+        jL_fullN.setText("Full Name");
+
+        jTF_fullN.setBackground(java.awt.SystemColor.inactiveCaptionBorder);
+        jTF_fullN.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTF_fullN.setName(""); // NOI18N
+        jTF_fullN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF_fullNActionPerformed(evt);
+            }
+        });
+
+        jL_studID.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jL_studID.setForeground(java.awt.SystemColor.controlDkShadow);
+        jL_studID.setText("Student ID");
+
+        jTF_studID.setBackground(java.awt.SystemColor.inactiveCaptionBorder);
+        jTF_studID.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTF_studID.setName(""); // NOI18N
+        jTF_studID.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF_studIDActionPerformed(evt);
+            }
+        });
+
+        jL_studPass.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jL_studPass.setForeground(java.awt.SystemColor.controlDkShadow);
+        jL_studPass.setText("Password");
+
+        jTF_studPass.setBackground(java.awt.SystemColor.inactiveCaptionBorder);
+        jTF_studPass.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTF_studPass.setName(""); // NOI18N
+        jTF_studPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF_studPassActionPerformed(evt);
+            }
+        });
+
+        jL_PLMemail.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jL_PLMemail.setForeground(java.awt.SystemColor.controlDkShadow);
+        jL_PLMemail.setText("PLM Email");
+
+        jTF_PLMemail.setBackground(java.awt.SystemColor.inactiveCaptionBorder);
+        jTF_PLMemail.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTF_PLMemail.setName(""); // NOI18N
+        jTF_PLMemail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTF_PLMemailActionPerformed(evt);
+            }
+        });
+
+        LoginB.setBackground(new java.awt.Color(221, 59, 65));
+        LoginB.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        LoginB.setForeground(new java.awt.Color(255, 255, 255));
+        LoginB.setText("Sign up");
+        LoginB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        LoginB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginBActionPerformed(evt);
+            }
+        });
+
+        SignupB.setForeground(java.awt.Color.red);
+        SignupB.setText("Back to Log In");
+        SignupB.setBorder(null);
+        SignupB.setBorderPainted(false);
+        SignupB.setContentAreaFilled(false);
+        SignupB.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        SignupB.setFocusPainted(false);
+        SignupB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignupBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTF_fullN, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTF_studID, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jL_studID)
+                                    .addComponent(jL_fullN)
+                                    .addComponent(LoginB, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jL_studPass)
+                                    .addComponent(jTF_studPass, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jL_PLMemail)
+                                    .addComponent(jTF_PLMemail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jL_title, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(178, 178, 178)
+                        .addComponent(SignupB)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                .addComponent(jL_pic, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jL_pic, javax.swing.GroupLayout.PREFERRED_SIZE, 500, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jL_title)
+                .addGap(27, 27, 27)
+                .addComponent(jL_fullN)
+                .addGap(1, 1, 1)
+                .addComponent(jTF_fullN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25)
+                .addComponent(jL_studID)
+                .addGap(1, 1, 1)
+                .addComponent(jTF_studID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(jL_studPass)
+                .addGap(1, 1, 1)
+                .addComponent(jTF_studPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
+                .addComponent(jL_PLMemail)
+                .addGap(1, 1, 1)
+                .addComponent(jTF_PLMemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LoginB, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(SignupB)
+                .addGap(33, 33, 33))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTF_fullNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_fullNActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF_fullNActionPerformed
+
+    private void jTF_studIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_studIDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF_studIDActionPerformed
+
+    private void LoginBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginBActionPerformed
+
+    private void SignupBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupBActionPerformed
+        setVisible(false);
+        LoginForm LF = new LoginForm();
+        LF.setVisible(true);
+    }//GEN-LAST:event_SignupBActionPerformed
+
+    private void jTF_studPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_studPassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF_studPassActionPerformed
+
+    private void jTF_PLMemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTF_PLMemailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTF_PLMemailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -68,6 +256,7 @@ public class SignupForm extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(SignupForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -78,5 +267,17 @@ public class SignupForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton LoginB;
+    private javax.swing.JButton SignupB;
+    private javax.swing.JLabel jL_PLMemail;
+    private javax.swing.JLabel jL_fullN;
+    private javax.swing.JLabel jL_pic;
+    private javax.swing.JLabel jL_studID;
+    private javax.swing.JLabel jL_studPass;
+    private javax.swing.JLabel jL_title;
+    private java.awt.TextField jTF_PLMemail;
+    private java.awt.TextField jTF_fullN;
+    private java.awt.TextField jTF_studID;
+    private java.awt.TextField jTF_studPass;
     // End of variables declaration//GEN-END:variables
 }
