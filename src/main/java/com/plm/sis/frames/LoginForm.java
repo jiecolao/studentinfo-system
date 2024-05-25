@@ -2,19 +2,24 @@ package com.plm.sis.frames;
 
 import javax.swing.*;
 import java.awt.*;
+import java.lang.*;
+
 import com.plm.sis.frames.*;
+import com.plm.sis.model.User;
+import com.plm.sis.database.DBaccess;
+
 
 public class LoginForm extends javax.swing.JFrame {
 
-    /**
-     * Creates new form LoginForm
-     */
+    Dashboard DashB;
+    DBaccess db = new DBaccess();
+    User user;
+    
     public LoginForm() {
         initComponents();
         setResizableImage();
     }
 
-    // Method to resize and set the image
     private void setResizableImage() {
         // Load the image
         String filePath = "C:\\Users\\Victus\\Documents\\NetBeansProjects\\SIS\\src\\main\\resources\\pictest.jpg";
@@ -178,7 +183,26 @@ public class LoginForm extends javax.swing.JFrame {
     }//GEN-LAST:event_SignupBActionPerformed
 
     private void LoginBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBActionPerformed
-        // TODO add your handling code here:
+        int stud_id;
+        String stud_pass;
+        
+        try {
+            stud_id = Integer.valueOf(jTF_studID.getText());
+            stud_pass = jTF_studPass.getText();
+            System.out.println(stud_id);
+            if (db.checkAcc(stud_id, stud_pass) == true){
+                user = new User(stud_id);
+                dispose();
+                DashB = new Dashboard();
+                DashB.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "No Record of " + stud_id, "NOTICE" ,JOptionPane.PLAIN_MESSAGE);
+            }
+            
+        } catch (NumberFormatException e){
+            JOptionPane.showMessageDialog(null, "Invalid Student ID", "NOTICE" ,JOptionPane.PLAIN_MESSAGE);
+        }
+        
     }//GEN-LAST:event_LoginBActionPerformed
 
     /**

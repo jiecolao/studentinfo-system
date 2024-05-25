@@ -8,10 +8,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.time.*;
 
+import com.plm.sis.frames.*;
+import com.plm.sis.model.User;
+import com.plm.sis.database.DBaccess;
+
 public class Dashboard extends javax.swing.JFrame {
 
     private Timer timer;
-    
+    LoginForm LoginF;
     
     public Dashboard() {
         initComponents();
@@ -90,7 +94,6 @@ public class Dashboard extends javax.swing.JFrame {
         jB_Personal.setBorder(null);
         jB_Personal.setBorderPainted(false);
         jB_Personal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jB_Personal.setLabel("");
         jB_Personal.setName(""); // NOI18N
         jB_Personal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,7 +207,9 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jB_CurriculumActionPerformed
 
     private void jB_LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB_LogoutActionPerformed
-        // TODO add your handling code here:
+        dispose();
+        LoginF = new LoginForm();
+        LoginF.setVisible(true);
     }//GEN-LAST:event_jB_LogoutActionPerformed
 
     

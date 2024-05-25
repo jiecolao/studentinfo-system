@@ -20,7 +20,7 @@ public class DBaccess {
     // CHANGE NIYO YUNG INFORMATION DITO PARA MATRY NYO RIN SAINYO
     private static final String username = "root";
     private static final String pass = "SqlSakalam765";
-    private static final String dataConnect = "jdbc:mysql://localhost:3306/studdb";
+    private static final String dataConnect = "jdbc:mysql://localhost:3306/sisdb";
 
     private Connection sqlConn = null;
     private PreparedStatement pst = null;
@@ -116,7 +116,41 @@ public class DBaccess {
     // NOTE: invoke nyo createDB sa class nyo para maverify if merong database
     
     // for LOGIN
-    
+    public boolean checkAcc(int stud_id, String stud_pass){
+        boolean isExist = false;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            sqlConn = DriverManager.getConnection(dataConnect, username, pass);
+            String sqlcmd = "SELECT * FROM users WHERE stud_id = ? AND stud_pass = ?";
+            pst = sqlConn.prepareStatement(sqlcmd);
+            
+            pst.setInt(1, stud_id);
+            pst.setString(2, stud_pass);
+            
+            rs = pst.executeQuery();
+
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                isExist = true; 
+                System.out.println("Account exists");
+            } 
+            
+        } catch (SQLException e) {
+                e.printStackTrace();
+        } catch (ClassNotFoundException e) { 
+            e.printStackTrace();    
+            throw new RuntimeException("Failed to load MySQL JDBC driver");
+        } finally {                             
+            try {
+                if (rs != null) rs.close();
+                if (pst != null) pst.close();
+                if (sqlConn != null) sqlConn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return isExist;
+    }
     
     // for SIGNUP
     
