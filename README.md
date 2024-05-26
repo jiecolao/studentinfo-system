@@ -97,6 +97,31 @@ Itake note niyo lang yung names ng **TABLE** and **COLUMN** pati yung correspond
 
 <br>
 
+## 🔴 ADDRESSING ERRORS (BUILD FAILURE: DependencyResolutionException)
+
+![image](https://github.com/jiecolao/studentinfo-system/assets/137901217/d633e182-8c94-48e8-9028-ac403b8e6839)
+
+Kapag ganto lumabas sa screen niyo, it means hindi madetect ng project yung sql connector (*JDBC*). <br>
+
+Download niyo dito yung sql connector <br>
+🔗 https://dev.mysql.com/downloads/connector/j/ <br>
+(1) choose `Platform Independent` <br>
+(2) Install yung second option <br>
+
+After niyo mainstall, unzip niyo ung folder then tandaan kung san mo ilalagay. <br>
+
+After nyan, go back to netbeans tas right-click project and then click `Manually Install Artifact`
+
+![Screenshot (159)](https://github.com/jiecolao/studentinfo-system/assets/137901217/922cf422-b0bc-440e-9bc6-f085e38c42a4)
+
+Ispecify niyo filepath nung mysql-connector-j-blabla galing mismo don sa inunzip niyo tas install (*MAKE SURE NA .jar FILE ANG NAKASPECIFY SA FILEPATH HA, HINDI FOLDER*)
+
+![image](https://github.com/jiecolao/studentinfo-system/assets/137901217/7663f3da-a6b4-44d4-93b7-0ed09256650f)
+
+And then install
+
+ 
+
 [^1]: How to link github to Netbeans projects 🔗 https://youtu.be/UOIPS-ewFHg?si=D6DL5SrgkqCaMw_O
 [^2]: Github tutorial via powershell 🔗 https://youtu.be/hrTQipWp6co?si=eql_MuhQurMwOfaV
 
