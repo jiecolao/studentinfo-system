@@ -40,7 +40,7 @@
                                   <Component id="jTF_studID" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                   <Component id="jL_studID" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jL_fullN" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="LoginB" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Component id="jB_Register" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                   <Component id="jL_studPass" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jTF_studPass" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                   <Component id="jL_PLMemail" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -52,7 +52,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
-                      <Component id="SignupB" min="-2" max="-2" attributes="0"/>
+                      <Component id="jB_Login" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="99" max="32767" attributes="0"/>
@@ -83,9 +83,9 @@
               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
               <Component id="jTF_PLMemail" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="LoginB" min="-2" pref="43" max="-2" attributes="0"/>
+              <Component id="jB_Register" min="-2" pref="43" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Component id="SignupB" min="-2" max="-2" attributes="0"/>
+              <Component id="jB_Login" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -211,7 +211,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTF_PLMemailActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="LoginB">
+    <Component class="javax.swing.JButton" name="jB_Register">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="41" green="3b" red="dd" type="rgb"/>
@@ -222,16 +222,16 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Sign up"/>
+        <Property name="text" type="java.lang.String" value="Register"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Hand Cursor"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LoginBActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jB_RegisterActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="SignupB">
+    <Component class="javax.swing.JButton" name="jB_Login">
       <Properties>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" id="red" palette="1" red="ff" type="palette"/>
@@ -248,7 +248,7 @@
         <Property name="focusPainted" type="boolean" value="false"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SignupBActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jB_LoginActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

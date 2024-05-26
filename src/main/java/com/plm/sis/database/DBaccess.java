@@ -14,13 +14,15 @@
 package com.plm.sis.database;
 
 import java.sql.*;
+import javax.swing.JOptionPane;
 
 public class DBaccess {
     
     // CHANGE NIYO YUNG INFORMATION DITO PARA MATRY NYO RIN SAINYO
     private static final String username = "root";
     private static final String pass = "SqlSakalam765";
-    private static final String dataConnect = "jdbc:mysql://localhost:3306/sisdb";
+    private static final String dataConnect = "jdbc:mysql://localhost:3306/";
+    private static final String db_name = "sisdb";
 
     private Connection sqlConn = null;
     private PreparedStatement pst = null;
@@ -34,12 +36,12 @@ public class DBaccess {
             sqlConn = DriverManager.getConnection(dataConnect, username, pass);
             
             // CREATE DATABASE
-            String sqlcmd = "CREATE DATABASE IF NOT EXISTS sisdb";
+            String sqlcmd = "CREATE DATABASE IF NOT EXISTS " + db_name;
             pst = sqlConn.prepareStatement(sqlcmd);
             pst.executeUpdate();
             
             // SET DATABASE
-            sqlConn.setCatalog("sisdb");
+            sqlConn.setCatalog(db_name);
             
             // CREATE TABLES
             // users
@@ -52,6 +54,7 @@ public class DBaccess {
             // info
             sqlcmd = "CREATE TABLE IF NOT EXISTS info (" +
                     "stud_id INT, " +
+                    "stud_email VARCHAR(50), " +
                     "stud_name VARCHAR(100), " +
                     "stud_contact INT, " +
                     "stud_col VARCHAR(50), " +
@@ -120,7 +123,7 @@ public class DBaccess {
         boolean isExist = false;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            sqlConn = DriverManager.getConnection(dataConnect, username, pass);
+            sqlConn = DriverManager.getConnection(dataConnect + db_name, username, pass);
             String sqlcmd = "SELECT * FROM users WHERE stud_id = ? AND stud_pass = ?";
             pst = sqlConn.prepareStatement(sqlcmd);
             
@@ -153,10 +156,119 @@ public class DBaccess {
     }
     
     // for SIGNUP
+    public boolean checkUser(int stud_id){
+        boolean isNotRegistered = false;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            sqlConn = DriverManager.getConnection(dataConnect + db_name, username, pass);
+            String sqlcmd = "SELECT * FROM info "
+                    + "WHERE stud_id = ? ;";
+            pst = sqlConn.prepareStatement(sqlcmd);
+            
+            pst.setInt(1, stud_id);
+            
+            rs = pst.executeQuery();
+
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                System.out.println("Account already exists");
+                JOptionPane.showMessageDialog(null, "Student ID already exists", "NOTICE" ,JOptionPane.PLAIN_MESSAGE);
+                isNotRegistered = false; 
+            } else {
+                System.out.println("Account UNIQUE");
+                isNotRegistered = true;
+            }
+            
+        } catch (SQLException e) {
+                e.printStackTrace();
+        } catch (ClassNotFoundException e) { 
+            e.printStackTrace();    
+            throw new RuntimeException("Failed to load MySQL JDBC driver");
+        } finally {                             
+            try {
+                if (rs != null) rs.close();
+                if (pst != null) pst.close();
+                if (sqlConn != null) sqlConn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return isNotRegistered;
+    }
     
+    public void registerUser(int stud_id, String stud_pass, String user_email, String user_fN){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            sqlConn = DriverManager.getConnection(dataConnect + db_name, username, pass);
+            String sqlcmd = "INSERT INTO users "
+                    + "VALUES (?, ?);";
+            pst = sqlConn.prepareStatement(sqlcmd);
+            
+            pst.setInt(1, stud_id);
+            pst.setString(2, stud_pass);
+            pst.executeUpdate();
+            
+            sqlcmd = "INSERT INTO info (stud_id, stud_email, stud_name) "
+                    + "VALUES (?, ?, ?);";
+            pst = sqlConn.prepareStatement(sqlcmd);
+            pst.setInt(1, stud_id);
+            pst.setString(2, user_email);
+            pst.setString(3, user_fN);
+            pst.executeUpdate();
+        } catch (SQLException e) {
+                e.printStackTrace();
+        } catch (ClassNotFoundException e) { 
+            e.printStackTrace();    
+            throw new RuntimeException("Failed to load MySQL JDBC driver");
+        } finally {                             
+            try {
+                if (rs != null) rs.close();
+                if (pst != null) pst.close();
+                if (sqlConn != null) sqlConn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     
     // for DASHBOARD
     
-   
     
+    // for PERSONAL
+    
+    
+    // for GRADES
+    
+    
+    // VVVVV TEMPLATE NYO VVVVV
+    public void methodName(){ // add parameters if necessary
+        try {
+            // -- DEFAULT -- 
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            sqlConn = DriverManager.getConnection(dataConnect + db_name, username, pass);
+            // -- DEFAULT --
+            
+            // -- CODE NYO -- 
+            String sqlcmd = ""; // sql command nyo
+            // -- CODE NYO --
+            
+            // -- DEFAULT --
+            pst = sqlConn.prepareStatement(sqlcmd);
+            pst.executeUpdate(); // .executeQuery() if doing SELECT
+            // -- DEFAULT -- (wag na galawin yung mga nasa baba catch, finally, throw, etc.)
+        } catch (SQLException e) {
+                e.printStackTrace(); 
+        } catch (ClassNotFoundException e) { 
+            e.printStackTrace();    
+            throw new RuntimeException("Failed to load MySQL JDBC driver");
+        } finally {                             
+            try {
+                if (rs != null) rs.close();
+                if (pst != null) pst.close();
+                if (sqlConn != null) sqlConn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
